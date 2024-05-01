@@ -15,6 +15,7 @@
 		97D6F1842BE2404D0056B7FB /* IsKingInCheckiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D6F1832BE2404D0056B7FB /* IsKingInCheckiOSUITests.swift */; };
 		97D6F1862BE2404D0056B7FB /* IsKingInCheckiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D6F1852BE2404D0056B7FB /* IsKingInCheckiOSUITestsLaunchTests.swift */; };
 		97D6F1942BE248CC0056B7FB /* Chessboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D6F1932BE248CC0056B7FB /* Chessboard.swift */; };
+		AD3FD34D2BE2633A0024C499 /* chessboard.rtf in Resources */ = {isa = PBXBuildFile; fileRef = AD3FD34C2BE2633A0024C499 /* chessboard.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		97D6F1852BE2404D0056B7FB /* IsKingInCheckiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsKingInCheckiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		97D6F1922BE242480056B7FB /* NOTES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = NOTES.md; sourceTree = "<group>"; };
 		97D6F1932BE248CC0056B7FB /* Chessboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chessboard.swift; sourceTree = "<group>"; };
+		AD3FD34C2BE2633A0024C499 /* chessboard.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = chessboard.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				97D6F1932BE248CC0056B7FB /* Chessboard.swift */,
 				97D6F16C2BE2404C0056B7FB /* Assets.xcassets */,
 				97D6F16E2BE2404C0056B7FB /* Preview Content */,
+				AD3FD34C2BE2633A0024C499 /* chessboard.rtf */,
 			);
 			path = IsKingInCheckiOS;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD3FD34D2BE2633A0024C499 /* chessboard.rtf in Resources */,
 				97D6F1702BE2404C0056B7FB /* Preview Assets.xcassets in Resources */,
 				97D6F16D2BE2404C0056B7FB /* Assets.xcassets in Resources */,
 			);
