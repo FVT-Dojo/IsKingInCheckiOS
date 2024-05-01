@@ -21,14 +21,21 @@ final class IsKingInCheckiOSUITests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    
+    func testStartGameButtonExistsAndVerifyText() throws {
         let app = XCUIApplication()
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        // Find the button using the accessibility identifier
+        let startButton = app.buttons["startGameButton"]
+        
+        // Assert that the button exists
+        XCTAssert(startButton.exists, "The start game button should exist.")
+        
+        // Verify the label text of the button
+        XCTAssertEqual(startButton.label, "Start the game", "The button's label should read 'Start the game'.")
     }
+
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {

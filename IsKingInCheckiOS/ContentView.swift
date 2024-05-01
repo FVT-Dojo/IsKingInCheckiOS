@@ -7,17 +7,36 @@
 
 import SwiftUI
 
+class ViewModel: ObservableObject {
+    var isGameStarted = false
+    
+    func startButtonTapped() {
+        isGameStarted = true
+    }
+}
+
 struct ContentView: View {
+    @StateObject var viewModel = ViewModel()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            if viewModel.isGameStarted {
+            } else {
+                Button {
+                    viewModel.startButtonTapped()
+                } label: {
+                    Text(verbatim: "Start the game")
+                        .padding()
+                        .background(Color.blue.cornerRadius(15.0))
+                        .foregroundColor(.white)
+                }
+                .accessibilityIdentifier("startGameButton")
+            }
         }
         .padding()
     }
 }
+
 
 #Preview {
     ContentView()

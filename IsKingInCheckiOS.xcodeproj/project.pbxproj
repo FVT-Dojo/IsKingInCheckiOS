@@ -14,6 +14,7 @@
 		97D6F17A2BE2404D0056B7FB /* IsKingInCheckiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D6F1792BE2404D0056B7FB /* IsKingInCheckiOSTests.swift */; };
 		97D6F1842BE2404D0056B7FB /* IsKingInCheckiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D6F1832BE2404D0056B7FB /* IsKingInCheckiOSUITests.swift */; };
 		97D6F1862BE2404D0056B7FB /* IsKingInCheckiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D6F1852BE2404D0056B7FB /* IsKingInCheckiOSUITestsLaunchTests.swift */; };
+		97D6F1942BE248CC0056B7FB /* Chessboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D6F1932BE248CC0056B7FB /* Chessboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		97D6F17F2BE2404D0056B7FB /* IsKingInCheckiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IsKingInCheckiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D6F1832BE2404D0056B7FB /* IsKingInCheckiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsKingInCheckiOSUITests.swift; sourceTree = "<group>"; };
 		97D6F1852BE2404D0056B7FB /* IsKingInCheckiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsKingInCheckiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		97D6F1922BE242480056B7FB /* NOTES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = NOTES.md; sourceTree = "<group>"; };
+		97D6F1932BE248CC0056B7FB /* Chessboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chessboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,7 @@
 		97D6F15C2BE2404B0056B7FB = {
 			isa = PBXGroup;
 			children = (
+				97D6F1922BE242480056B7FB /* NOTES.md */,
 				97D6F1672BE2404B0056B7FB /* IsKingInCheckiOS */,
 				97D6F1782BE2404D0056B7FB /* IsKingInCheckiOSTests */,
 				97D6F1822BE2404D0056B7FB /* IsKingInCheckiOSUITests */,
@@ -96,6 +100,7 @@
 			children = (
 				97D6F1682BE2404B0056B7FB /* IsKingInCheckiOSApp.swift */,
 				97D6F16A2BE2404B0056B7FB /* ContentView.swift */,
+				97D6F1932BE248CC0056B7FB /* Chessboard.swift */,
 				97D6F16C2BE2404C0056B7FB /* Assets.xcassets */,
 				97D6F16E2BE2404C0056B7FB /* Preview Content */,
 			);
@@ -258,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97D6F16B2BE2404B0056B7FB /* ContentView.swift in Sources */,
+				97D6F1942BE248CC0056B7FB /* Chessboard.swift in Sources */,
 				97D6F1692BE2404B0056B7FB /* IsKingInCheckiOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
