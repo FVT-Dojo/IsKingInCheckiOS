@@ -110,17 +110,14 @@
 		97D6F1672BE2404B0056B7FB /* IsKingInCheckiOS */ = {
 			isa = PBXGroup;
 			children = (
+				AD6E0F6C2BEB92D800A4C382 /* Integration */,
+				AD6E0F6B2BEB92B700A4C382 /* View */,
+				AD6E0F6A2BEB92AF00A4C382 /* ViewModel */,
+				AD6E0F692BEB92A600A4C382 /* Model */,
 				97D6F1682BE2404B0056B7FB /* IsKingInCheckiOSApp.swift */,
-				97D6F16A2BE2404B0056B7FB /* ContentView.swift */,
-				97D6F1952BE39B7E0056B7FB /* ChessboardModels.swift */,
-				97D6F1972BE39B960056B7FB /* ChessboardViewModel.swift */,
 				97D6F16C2BE2404C0056B7FB /* Assets.xcassets */,
 				97D6F16E2BE2404C0056B7FB /* Preview Content */,
 				AD3FD34C2BE2633A0024C499 /* chessboard.rtf */,
-				97D6F1992BE39BAA0056B7FB /* ChessboardView.swift */,
-				97D6F19B2BE39BBA0056B7FB /* ApiClient.swift */,
-				97D6F19D2BE39BCF0056B7FB /* MockData.swift */,
-				AD6E0F672BEB785C00A4C382 /* ApiClientLive.swift */,
 			);
 			path = IsKingInCheckiOS;
 			sourceTree = "<group>";
@@ -148,6 +145,41 @@
 				97D6F1852BE2404D0056B7FB /* IsKingInCheckiOSUITestsLaunchTests.swift */,
 			);
 			path = IsKingInCheckiOSUITests;
+			sourceTree = "<group>";
+		};
+		AD6E0F692BEB92A600A4C382 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				97D6F1952BE39B7E0056B7FB /* ChessboardModels.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AD6E0F6A2BEB92AF00A4C382 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				97D6F1972BE39B960056B7FB /* ChessboardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AD6E0F6B2BEB92B700A4C382 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				97D6F16A2BE2404B0056B7FB /* ContentView.swift */,
+				97D6F1992BE39BAA0056B7FB /* ChessboardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD6E0F6C2BEB92D800A4C382 /* Integration */ = {
+			isa = PBXGroup;
+			children = (
+				97D6F19B2BE39BBA0056B7FB /* ApiClient.swift */,
+				97D6F19D2BE39BCF0056B7FB /* MockData.swift */,
+				AD6E0F672BEB785C00A4C382 /* ApiClientLive.swift */,
+			);
+			path = Integration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
