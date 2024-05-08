@@ -16,8 +16,11 @@ class ViewModel: ObservableObject {
 }
 
 struct ContentView: View {
-    @StateObject var viewModel = ViewModel()
+    @ObservedObject var viewModel: ViewModel
     
+    init(viewModel: ViewModel) {
+        self.viewModel = viewModel
+    }
     var body: some View {
         VStack {
             if viewModel.isGameStarted {

@@ -46,3 +46,7 @@ struct ChessboardView: View {
 #Preview(body: {
     ChessboardView(viewModel: ChessboardViewModel(apiClient: .mock))
 })
+
+#Preview(body: {
+    ChessboardView(viewModel: ChessboardViewModel(apiClient: .live))
+})
