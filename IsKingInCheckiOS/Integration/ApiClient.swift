@@ -5,7 +5,13 @@ struct ApiClient {
 }
 
 extension ApiClient {
-    static let mock = ApiClient {
-        .mockNotInCheck
+//    static let mock = ApiClient {
+//        .mockNotInCheck
+//    }
+    
+    static func mock(chessboardStatus: ChessboardStatus) -> Self {
+        ApiClient {
+            chessboardStatus
+        }
     }
 }

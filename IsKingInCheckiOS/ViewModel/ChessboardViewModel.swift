@@ -1,13 +1,19 @@
 import SwiftUI
 
+@MainActor
 class ChessboardViewModel: ObservableObject {
     @Published var squares: [[ChessboardSquare]] = []
+    @Published var isKingInCheck = false
     @Published var chessboardReady = false
     
     var apiClient: ApiClient
     
     init(apiClient: ApiClient) {
         self.apiClient = apiClient
+    }
+    
+    func onAppear() {
+        chessboardReady = false
         fetchChessboard(completion: self.generateChessboard)
     }
     
@@ -21,6 +27,8 @@ class ChessboardViewModel: ObservableObject {
                 return ChessboardSquare(color: color, piece: piece)
             }
         }
+        
+        isKingInCheck = chessboardStatus.isKingInCheck
         
         chessboardReady = true
     }

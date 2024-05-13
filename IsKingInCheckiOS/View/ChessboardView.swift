@@ -36,17 +36,23 @@ struct ChessboardView: View {
                         }
                     }
                 }
+                Text(viewModel.isKingInCheck ? "The king is in check" : "The king is not in check").padding()
             } else {
                 Text("Loading Chessboard...")
             }
-        }
+        }.onAppear(perform: viewModel.onAppear)
+            .accessibilityIdentifier("Chessboard")
     }
 }
 
-#Preview(body: {
-    ChessboardView(viewModel: ChessboardViewModel(apiClient: .mock))
+#Preview("Mocked API - Not in check", body: {
+    ChessboardView(viewModel: ChessboardViewModel(apiClient: .mock(chessboardStatus: .mockNotInCheck)))
 })
 
-#Preview(body: {
+#Preview("Mocked API - In check", body: {
+    ChessboardView(viewModel: ChessboardViewModel(apiClient: .mock(chessboardStatus: .mockInCheck)))
+})
+
+#Preview("Live API", body: {
     ChessboardView(viewModel: ChessboardViewModel(apiClient: .live))
 })

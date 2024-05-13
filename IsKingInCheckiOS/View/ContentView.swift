@@ -7,35 +7,16 @@
 
 import SwiftUI
 
-class ViewModel: ObservableObject {
-    var isGameStarted = false
-    
-    func startButtonTapped() {
-        isGameStarted = true
-    }
-}
-
 struct ContentView: View {
-    @ObservedObject var viewModel: ViewModel
-    
-    init(viewModel: ViewModel) {
-        self.viewModel = viewModel
-    }
     var body: some View {
-        VStack {
-            if viewModel.isGameStarted {
-            } else {
-                Button {
-                    viewModel.startButtonTapped()
-                } label: {
-                    Text(verbatim: "Start the game")
-                        .padding()
-                        .background(Color.blue.cornerRadius(15.0))
-                        .foregroundColor(.white)
-                }
-                .accessibilityIdentifier("startGameButton")
+        NavigationStack {
+            VStack {
+                NavigationLink("Start the game") {
+                    ChessboardView(viewModel: ChessboardViewModel(apiClient: .live))
+                }.accessibilityIdentifier("startGameButton")
             }
+            .padding()
         }
-        .padding()
+        
     }
 }

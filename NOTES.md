@@ -8,5 +8,14 @@
 - ✅ Show the K and R using a mock
 - ✅ REFACTOR: Remove the enum of pieces to simplify the code, and to enable the backend to invent new pieces on the fly
 - ✅ REFACTOR: Move parts in the chessboard file to their own files, to adhere to MVVM and clean up the code
-- 🙋‍♂️ Implement the actual API call!
-    -- We created a setup to do this, but it is not working yet. Maybe this is the same problem we encountered in Android. So look in that direction, Arthur!
+- ✅ Implement the actual API call!
+- ✅ Show a label according to the API whether the king is in check or not.
+    - ✅ Have 2 previews: one in check, one not in check
+    - ✅ Implement the label
+    
+- ✅ Implement the start button, so it shows the chessboard after pushing the button
+- ✅ Refresh the chessboard when navigating back and forward
+
+- See what we can test
+- ✅ UI Test: Click the button, verify that it navigates to the chessboard
+    - Check that the right content is shown according to the mocked API Client
