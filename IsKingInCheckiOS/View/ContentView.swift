@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    var apiClient: ApiClient
     var body: some View {
         NavigationStack {
             VStack {
                 NavigationLink("Start the game") {
-                    ChessboardView(viewModel: ChessboardViewModel(apiClient: .live))
+                    ChessboardView(viewModel: ChessboardViewModel(apiClient: apiClient))
                 }.accessibilityIdentifier("startGameButton")
             }
             .padding()

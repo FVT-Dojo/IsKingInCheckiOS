@@ -38,20 +38,21 @@ final class IsKingInCheckiOSUITests: XCTestCase {
 
     func testStartGameButtonNavigatesToChessboard() throws {
         let app = XCUIApplication()
+        app.launchArguments = ["--MockName", "MockInCheck"]
         app.launch()
         
-        // Find the button using the accessibility identifier
         let startButton = app.buttons["startGameButton"]
         
-        // Simulate a tap on the start button
         startButton.tap()
         
-        // Use XCTest's expectation to wait for the VStack to appear
         let chessboard = app.staticTexts["Chessboard"]
         let chessboardExists = chessboard.waitForExistence(timeout: 5)
         
-        // Assert that the chessboard VStack is displayed
+        let isKingInCheckLabel = app.staticTexts["IsKingInCheckLabel"]
+        let isKingInCheckLabelExists = isKingInCheckLabel.waitForExistence(timeout: 5)
+        
         XCTAssertTrue(chessboardExists, "Chessboard VStack should be present after tapping start game button.")
+        XCTAssertTrue(isKingInCheckLabelExists, "The label should be there!!! :(")
     }
 
     func testLaunchPerformance() throws {
