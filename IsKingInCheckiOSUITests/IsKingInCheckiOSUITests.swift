@@ -36,7 +36,7 @@ final class IsKingInCheckiOSUITests: XCTestCase {
         XCTAssertEqual(startButton.label, "Start the game", "The button's label should read 'Start the game'.")
     }
 
-    func testStartGameButtonNavigatesToChessboard() throws {
+    func testStartGameButtonNavigatesToChessboardInCheck() throws {
         let app = XCUIApplication()
         app.launchArguments = ["--MockName", "MockInCheck"]
         app.launch()
@@ -48,11 +48,36 @@ final class IsKingInCheckiOSUITests: XCTestCase {
         let chessboard = app.staticTexts["Chessboard"]
         let chessboardExists = chessboard.waitForExistence(timeout: 5)
         
+        XCTAssertTrue(chessboardExists, "Chessboard VStack should be present after tapping start game button.")
+        
         let isKingInCheckLabel = app.staticTexts["IsKingInCheckLabel"]
         let isKingInCheckLabelExists = isKingInCheckLabel.waitForExistence(timeout: 5)
+        XCTAssertTrue(isKingInCheckLabelExists, "The label should be there!!! :(")
+        
+        
+        XCTAssertEqual(isKingInCheckLabel.label, "The king is in check")
+    }
+    
+    func testStartGameButtonNavigatesToChessboardNotInCheck() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--MockName", "MockNotInCheck"]
+        app.launch()
+        
+        let startButton = app.buttons["startGameButton"]
+        
+        startButton.tap()
+        
+        let chessboard = app.staticTexts["Chessboard"]
+        let chessboardExists = chessboard.waitForExistence(timeout: 5)
         
         XCTAssertTrue(chessboardExists, "Chessboard VStack should be present after tapping start game button.")
+        
+        let isKingInCheckLabel = app.staticTexts["IsKingInCheckLabel"]
+        let isKingInCheckLabelExists = isKingInCheckLabel.waitForExistence(timeout: 5)
         XCTAssertTrue(isKingInCheckLabelExists, "The label should be there!!! :(")
+        
+        
+        XCTAssertEqual(isKingInCheckLabel.label, "The king is not in check")
     }
 
     func testLaunchPerformance() throws {

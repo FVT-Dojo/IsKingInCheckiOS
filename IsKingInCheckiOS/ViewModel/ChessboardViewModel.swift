@@ -12,9 +12,14 @@ class ChessboardViewModel: ObservableObject {
         self.apiClient = apiClient
     }
     
-    func onAppear() {
-        chessboardReady = false
-        fetchChessboard(completion: self.generateChessboard)
+    func task() async {
+        do {
+            let response = try await apiClient.fetchChessboard()
+            
+            generateChessboard(chessboardStatus: response)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     func generateChessboard(chessboardStatus: ChessboardStatus?) {
@@ -31,17 +36,5 @@ class ChessboardViewModel: ObservableObject {
         isKingInCheck = chessboardStatus.isKingInCheck
         
         chessboardReady = true
-    }
-    
-    func fetchChessboard(completion: @escaping (ChessboardStatus?) -> Void) {
-        Task {
-            do {
-                let response = try await apiClient.fetchChessboard()
-                completion(response)
-            } catch {
-                print(error.localizedDescription)
-                completion(nil)
-            }
-        }
     }
 }

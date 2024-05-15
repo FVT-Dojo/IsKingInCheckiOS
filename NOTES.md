@@ -20,4 +20,5 @@
 - ✅ UI Test: Click the button, verify that it navigates to the chessboard
     - Check that the right content is shown according to the mocked API Client
         - ✅ Add assertion that the label that displays if the king is in check or not is visible
-        - 🙋‍♂️ Make sure that the UI test uses the mock API client instead of the live one
+        - ✅ Make sure that the UI test uses the mock API client instead of the live one
+        - ✅ Add tests for "in check" and "not in check"

@@ -35,13 +35,16 @@ struct ChessboardView: View {
                                 .aspectRatio(1, contentMode: .fit)
                         }
                     }
-                }
-                Text(viewModel.isKingInCheck ? "The king is in check" : "The king is not in check").padding()
+                }.accessibilityIdentifier("Chessboard")
+                Text(viewModel.isKingInCheck ? "The king is in check" : "The king is not in check")
+                    .padding()
+                    .accessibilityIdentifier("IsKingInCheckLabel")
             } else {
                 Text("Loading Chessboard...")
             }
-        }.onAppear(perform: viewModel.onAppear)
-            .accessibilityIdentifier("Chessboard")
+        }.task {
+            await viewModel.task()
+        }
     }
 }
 
